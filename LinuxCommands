@@ -1,0 +1,58 @@
+# Создание файла Pets.txt с перечислением домашних животных
+cat > Pets.txt << EOL
+Dog
+Cat
+Hamster
+EOL
+
+# Создание файла PackAnimals.txt с перечислением вьючных животных
+cat > PackAnimals.txt << EOL
+Horse
+Camel
+Donkey
+EOL
+
+# Объединение содержимого файлов в один файл и просмотр его содержимого
+cat Pets.txt PackAnimals.txt > CombinedAnimals.txt
+cat CombinedAnimals.txt
+
+# Переименование файла
+mv CombinedAnimals.txt HumanFriends.txt
+
+# Просмотр списка файлов для проверки
+ls
+
+# Создание новой директории
+mkdir AnimalFiles
+
+# Перемещение файла HumanFriends.txt в новую директорию
+mv HumanFriends.txt AnimalFiles/
+
+# Просмотр содержимого директории для проверки
+ls AnimalFiles
+
+# Обновление списка пакетов
+sudo apt update
+
+# Установка MySQL Server
+sudo apt install mysql-server
+
+# Запуск и проверка статуса службы MySQL
+sudo systemctl start mysql
+sudo systemctl status mysql
+
+# Настройка MySQL (по желанию, можно выполнить для дополнительной безопасности)
+sudo mysql_secure_installation
+
+# Допустим что скаченный deb-пакет с интернета - package_name.deb - имя нашего пакета:
+# Установка deb-пакета
+sudo dpkg -i package_name.deb
+
+# Удаление deb-пакета
+sudo dpkg -r package_name
+
+# Сохранение истории команд в файл history.txt
+history > history.txt
+
+# Просмотр созданного файла history.txt
+cat history.txt
