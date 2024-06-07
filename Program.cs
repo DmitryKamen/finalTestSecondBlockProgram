@@ -97,7 +97,6 @@ class Program
             Console.WriteLine("Ошибка ввода данных. Попробуйте снова.");
         }
     }
-
     static void ShowAllAnimals()
     {
         foreach (var animal in animals)
@@ -105,7 +104,6 @@ class Program
             Console.WriteLine($"{animal.Name} ({animal.GetType().Name}) - Дата рождения: {animal.BirthDate.ToShortDateString()}");
         }
     }
-
     static void ShowAnimalCommands()
     {
         Console.WriteLine("Введите имя животного:");
@@ -122,7 +120,6 @@ class Program
             Console.WriteLine("Животное не найдено.");
         }
     }
-
     static void TrainAnimalNewCommand()
     {
         Console.WriteLine("Введите имя животного:");
@@ -142,7 +139,6 @@ class Program
             Console.WriteLine("Животное не найдено.");
         }
     }
-
     static void ShowAnimalsByBirthDate()
     {
         var sortedAnimals = animals.OrderBy(a => a.BirthDate).ToList();
@@ -152,7 +148,6 @@ class Program
             Console.WriteLine($"{animal.Name} ({animal.GetType().Name}) - Дата рождения: {animal.BirthDate.ToShortDateString()}");
         }
     }
-
     static void ShowAnimalCount()
     {
         Console.WriteLine($"Общее количество созданных животных: {Animal.AnimalCount}");
